@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <h4>Navbar</h4>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#">Work</a>
+      </li>
+      <li>
+        <a href="#">Projects</a>
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+
+
+
+  <script>
+    var burger = document.querySelector('.burger');
+    var ul = document.querySelector('ul');
+
+    function detectInnerWidth(width) {
+      for(var i = 0; i < ul.children.length; i++) {
+        var anchor = ul.children[i].children[0];
+        if(width > 768) {
+          if(anchor.style.opacity == 0) {
+            anchor.style.opacity = 1;
+          }
+        }else {
+          if(anchor.style.opacity == 0) {
+            anchor.style.opacity = 1;
+          }
+        }
+      }
+    }
+
+    window.addEventListener('resize', (e) => {
+      var width = window.innerWidth;
+      detectInnerWidth(width);
+      
+    })
+
+    burger.addEventListener('click', (e) => {
+      var width = window.innerWidth;
+      burger.classList.toggle('toggle')
+      ul.classList.toggle('nav-active');
+      detectInnerWidth(width);
+    });
+  </script>
+</body>
+
+</html>
