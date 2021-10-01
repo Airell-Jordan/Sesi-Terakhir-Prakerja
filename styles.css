@@ -4,94 +4,99 @@
   box-sizing: border-box;
 }
 
-nav {
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+#container {
+  background-color: #F4F4F4;
+  height: 100vh;
+  padding: 20px;
+ }
+
+.flex-wrap {
+  margin-bottom: 10px;
   display: flex;
-  background-color: rgb(155, 89, 31);
   justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
+  flex-wrap: wrap;
+  /* background-color: pink;  */
+}
+
+.card {
+  /* background-color: pink; */
+  position: relative;
+}
+
+.card .des {
+  background-color: #F97300;
+  border-top-right-radius: 93%;
+  position: absolute;
+  width: 105%;
+  bottom: 24px;
+  color: #fff;
+  transition: all .3s ease-in-out;
+  height: 12%;
+}
+
+.card .des h3 {
+  position: absolute;
+  top: 3px;
+  left: 40%;
+}
+
+.card .role {
+  color: #868e96;
+}
+
+.card:hover .des {
+  height: 100%;
+  top: 0;
+  border-top-right-radius: 0;
+  background-color: #F973007d;
+}
+
+.card:hover .des h3 {
+  top: 50%;
+  left: 55%;
+
+}
+
+.blog-card {
+  /* background-color: pink; */
+  width: 30%;
+  box-shadow: 0 0 20px #ccc;
+  border-radius: 3px;
+}
+
+.blog-card .blog-card-body {
+  padding: 15px;
+  border-bottom: 1px solid gray;
+}
+
+.blog-card .blog-card-footer {
+  padding: 15px;
 }
 
 
-.logo {
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: whitesmoke;
-  font-size: 20px;
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  width: 50%;
-  justify-content: space-around;
-  transition: all 1s ease;
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.nav-links li a {
-  color: whitesmoke;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-  transition: opacity 1s ease;
-}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
 
+#customers tr:hover {background-color: #ddd;}
 
-.burger {
-  cursor: pointer;
-  display: none;
-  
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: whitesmoke;
-  margin: 5px;
-  transition: all 1s ease;
-}
-
-
-@media screen and (max-width: 768px) {
-  body {
-    overflow: hidden;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    flex-direction: column;
-    background-color: rgb(155, 89, 31);
-    align-items: center;
-    height: 100vh;  
-    top: 50px;
-    z-index: -1;
-    width: 100%;
-    transform: translateX(100%);
-  }
-
-  .nav-links li a {
-    opacity: 0;
-  }
-}
-
-.nav-active {
-  transform: translateX(0%);
-} 
-
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  display: none;
-}
-
-.toggle .line3 {
-  transform: rotate(45deg);
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
 }

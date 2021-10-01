@@ -1,0 +1,27 @@
+Heroku:
+
+- Buat Akun Di Heroku
+- Install Heroku-cli
+- Buat file composer.json dengan syntax {}
+- Buat file index.php <?php include_once("home.html"); ?>
+
+Jalan perintah-perintah berikut di terminal:
+- git init
+- heroku login
+- heroku create nama-app
+- git add .
+- git commit -m "initial commit"
+- git push heroku master
+
+
+Firebase:
+
+- https://console.firebase.google.com/
+
+- install firebase-cli
+
+- firebase init
+
+- pilih hosting 
+
+- firebase deploy
